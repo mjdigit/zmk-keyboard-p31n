@@ -32,6 +32,12 @@
               layers = <0>;
               bindings = <&kp ESC>;
           };
+          c_minus {
+              timeout-ms = <50>;
+              key-positions = <9 10>;
+              layers = <0>;
+              bindings = <&kp MINUS>;
+          };
           c_tab {
               timeout-ms = <50>;
               key-positions = <11 12>;
@@ -115,4 +121,9 @@
             >;
 		};
 	};
+};
+
+&mt {
+    tapping-term-ms = <150>;
+    flavor = "balances";
 };
