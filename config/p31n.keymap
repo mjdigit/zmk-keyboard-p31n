@@ -29,43 +29,43 @@
           c_esc {
               timeout-ms = <50>;
               key-positions = <0 1>;
-              layers = <0>
+              layers = <0>;
               bindings = <&kp ESC>;
           };
           c_tab {
               timeout-ms = <50>;
               key-positions = <11 12>;
-              layers = <0>
+              layers = <0>;
               bindings = <&kp TAB>;
           };
           c_minus {
               timeout-ms = <50>;
               key-positions = <9 10>;
-              layers = <0>
+              layers = <0>;
               bindings = <&kp MINUS>;
           };
           c_semi {
               timeout-ms = <50>;
               key-positions = <19 20>;
-              layers = <0>
+              layers = <0>;
               bindings = <&kp SEMI>;
           };
           c_f1 {
               timeout-ms = <50>;
               key-positions = <0 1>;
-              layers = <1>
+              layers = <1>;
               bindings = <&kp F1>;
           };
           c_f12 {
               timeout-ms = <50>;
               key-positions = <9 10>;
-              layers = <1>
+              layers = <1>;
               bindings = <&kp F12>;
           };
           c_eq {
               timeout-ms = <50>;
               key-positions = <19 20>;
-              layers = <1>
+              layers = <1>;
               bindings = <&kp EQUAL>;
           };
       };
