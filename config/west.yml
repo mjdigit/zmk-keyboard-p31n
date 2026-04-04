@@ -10,5 +10,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: ZMK-Keyboard
+      url: https://github.com/X-Tips/ZMK-Keyboard
+      revision: main
+      path: modules/ZMK-Keyboard
   self:
     path: config
