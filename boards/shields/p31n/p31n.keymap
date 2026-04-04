@@ -24,33 +24,69 @@
         };
       };
 
+      combos {
+          compatible = "zmk,combos";
+          c_esc {
+              timeout-ms = <50>;
+              key-positions = <Q W>;
+              bindings = <&kp ESC>;
+          };
+          c_tab {
+              timeout-ms = <50>;
+              key-positions = <A S>;
+              bindings = <&kp TAB>;
+          };
+          c_minus {
+              timeout-ms = <50>;
+              key-positions = <O P>;
+              bindings = <&kp MINUS>;
+          };
+          c_semi {
+              timeout-ms = <50>;
+              key-positions = <L ENTER>;
+              bindings = <&kp SEMI>;
+          };
+          c_f1 {
+              timeout-ms = <50>;
+              key-positions = <F2 F3>;
+              bindings = <&kp F1>;
+          };
+          c_f12 {
+              timeout-ms = <50>;
+              key-positions = <F10 F11>;
+              bindings = <&kp F12>;
+          };
+          c_eq {
+              timeout-ms = <50>;
+              key-positions = <N9 N0>;
+              bindings = <&kp EQUAL>;
+          };
+      };
+
 	keymap0: keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
-            // |   Q   |   W   |   E   |   R   |   T   |    ----   |   Y   |   U   |   I    |   O    |   P   |
-            // |   A   |   S   |   D   |   F   |   G   |    ----   |   H   |   J   |   K    |   L    |  Ent  |
-            // | LG,Z  |  LA,X | LC,C  | LS,V  | LT1,B | LT3,SPACE | LT2,N | RS,M  | RS,TAb | RA,ESC | RG,BS | 
             bindings = <
-            &lt 4 Q      &kp W        &kp E         &kp R        &kp T      &none         &kp Y      &kp U         &kp I            &kp O          &kp P    
+            &mt LWIN Q   &kp W        &kp E         &kp R        &kp T      &none         &kp Y      &kp U         &kp I            &kp O          &mt RWIN P
             &kp A        &kp S        &kp D         &kp F        &kp G      &none         &kp H      &kp J         &kp K            &kp L          &kp ENTER
-            &mt LWIN Z   &mt LALT X   &mt LCTRL C   &mt LSHFT V  &lt 1 B    &lt 3 SPACE   &lt 2 N    &mt RSHFT M   &mt RCTRL COMMA  &mt RALT DOT   &mt RWIN BSPC
+            &mt LCTRL Z  &mt LSHFT X  &mt LALT C    &lt 1 V      &lt 1 B    &kp SPACE     &lt 2 N    &kp M         &mt RALT COMMA   &mt RSHFT DOT  &mt RCTRL FSLH
             >;
 		};
 
 		fn1_layer {
             bindings = <
-            &kp N7    &kp N8    &kp N9    &kp KP_DOT &kp KP_PLUS   &none          &kp KP_MULTIPLY  &kp DLLR      &kp COLON      &kp PIPE       &kp GRAVE  
-            &kp N4    &kp N5    &kp N6    &kp N0     &kp KP_MINUS  &none          &kp KP_SLASH     &kp HASH      &kp LBRC       &kp RBRC       &kp SEMI   
-            &kp N1    &kp N2    &kp N3    &kp BSPC   &to 0         &kp KP_ENTER   &kp BSLH         &kp AMPS      &kp LT         &kp GT         &kp SQT        
-             >;
+            &mt LWIN F2  &kp F3       &kp F4       &kp F5       &kp F6     &none          &kp F7    &kp F8        &kp F9           &kp F10        &mt RWIN F11 
+            &kp N1       &kp N2       &kp N3       &kp N4       &kp N5     &none          &kp N6    &kp N7        &kp N8           &kp N9         &kp N0   
+            &kp LCTRL    &kp LSHFT    &kp LALT     &none        &none      &kp SPACE      &kp GRAVE &kp SQT       &kp LBKT         &kp RBKT       &kp BSLH        
+            >;
 		};
 
 		fn2_layer {
             bindings = <
-            &kp TILDE &kp PRCNT &kp UNDER &kp CARET  &kp LBKT  &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
-            &kp AT    &kp DQT   &kp EXCL  &kp QMARK  &kp LPAR  &none          &kp RPAR  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN  
-            &kp LWIN  &kp LALT  &kp LCTRL &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp CAPS    &kp TAB     &kp ESC     &kp DEL      
+            &kp LWIN     &none       &none        &none        &none      &none          &kp HOME  &kp PG_UP     &kp PSCRN       &kp SLCK       &kp PAUSE_BREAK
+            &none        &none       &none        &none        &kp END    &none          &kp LEFT  &kp DOWN      &kp UP          &kp RIGHT      &kp BSPC
+            &kp LCTRL    &kp LSHFT   &kp LALT     &kp K_APP    &none      &kp LA(GRAVE)  &none     &kp PG_DN     &kp DEL         &none          &kp INS      
             >;
 		};
 
@@ -102,4 +138,9 @@
             >;
 		};
 	};
+};
+
+&mt {
+    tapping-term-ms = <150>;
+    flavor = "balances";
 };
