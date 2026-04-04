@@ -19,5 +19,5 @@
 #
 ---
 include:
-  - board: nrf52840_m2
+  - board: nrfmicro_13_52840
     shield: p31n

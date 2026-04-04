@@ -16,4 +16,4 @@ features:
   - keys
 
 requires:
-  - makerdiary_nrf52840_m2
+  - nrfmicro_13_52840
