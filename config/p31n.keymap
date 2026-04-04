@@ -29,7 +29,14 @@
           c_esc {
               timeout-ms = <50>;
               key-positions = <0 1>;
+              layers = <0>;
               bindings = <&kp ESC>;
+          };
+          c_tab {
+              timeout-ms = <50>;
+              key-positions = <11 12>;
+              layers = <0>;
+              bindings = <&kp TAB>;
           };
       };
 
