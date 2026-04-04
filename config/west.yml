@@ -14,5 +14,9 @@ manifest:
       url: https://github.com/X-Tips/ZMK-Keyboard
       revision: main
       path: modules/ZMK-Keyboard
+    - name: ''
+      url: https://github.com/joric/nrfmicro/
+      revision: main
+      path: modules/
   self:
     path: config
