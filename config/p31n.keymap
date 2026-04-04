@@ -57,7 +57,7 @@
           };
           c_f12 {
               timeout-ms = <50>;
-              key-positions = <9 10;
+              key-positions = <9 10>;
               layers = <1>;
               bindings = <&kp F12>;
           };
