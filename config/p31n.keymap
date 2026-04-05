@@ -22,6 +22,15 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+        altgrv: altgrv {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LALT>
+                ;
+        };
       };
 
       combos {
@@ -92,7 +101,7 @@
             bindings = <
             &kp LWIN     &none       &none        &none        &none      &none          &kp HOME  &kp PG_UP     &kp PSCRN       &kp SLCK       &kp PAUSE_BREAK
             &none        &none       &none        &none        &kp END    &none          &kp LEFT  &kp DOWN      &kp UP          &kp RIGHT      &kp BSPC
-            &kp LCTRL    &kp LSHFT   &kp LALT     &kp K_APP    &none      &kp LA(GRAVE)  &none     &kp PG_DN     &kp DEL         &none          &kp INS      
+            &kp LCTRL    &kp LSHFT   &kp LALT     &kp K_APP    &none      &altgrv        &none     &kp PG_DN     &kp DEL         &none          &kp INS      
             >;
 		};
 
